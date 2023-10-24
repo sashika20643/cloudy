@@ -21,7 +21,7 @@ signInWithEmailAndPassword(auth, email, password).then
 
     return (
         <div>
-<h1>Login</h1>
+<p className="text-3xl font-bold underline">Login</p>
 <form onSubmit={signIn} >
 <input type="text" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)} />
 <input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
