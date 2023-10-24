@@ -1,33 +1,38 @@
-import React, { useState } from "react";
-import { auth } from "../firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { NavLink, useNavigate } from 'react-router-dom'
+
+import sideimg from "../../public/Images/login.avif"
+import LoginForm from "../components/Loginform";
 
 
 const Login=()=>{
-    const navigate = useNavigate();
-const [email, setEmail]= useState("");
-const [password, setPassword]= useState("");
-const signIn = (e)=>{
-e.preventDefault();
-signInWithEmailAndPassword(auth, email, password).then
-((userCredential)=>{
-    console.log(userCredential)
-    navigate("/home")
-}).catch((error)=>{
-    console.log(error);
-})
-}
+
 
     return (
-        <div>
-<p className="text-3xl font-bold underline">Login</p>
-<form onSubmit={signIn} >
-<input type="text" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)} />
-<input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
-<button>Login</button>
-</form>
+        <section className="vh-100"  style={{backgroundColor:"#232e3f"}}>
+        <div className="container py-5 h-100" >
+          <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="col col-xl-10">
+              <div className="card" style={{boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px", borderRadius: '1rem' , backgroundColor:"#26324b"}}>
+                <div className="row g-0">
+                  <div className="col-md-6 col-lg-5 d-none d-md-block">
+           
+                    <img
+                      src={sideimg}
+                      alt="login form"
+                      className="img-fluid"
+                      style={{ borderRadius: '1rem 0 0 1rem' }}
+                    />
+                   
+                
+                  </div>
+                  <div className="col-md-6 col-lg-7 d-flex align-items-center">
+                   <LoginForm></LoginForm>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
     )
 }
 export default Login;
