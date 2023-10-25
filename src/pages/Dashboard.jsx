@@ -60,7 +60,7 @@ const Dashboard = () => {
       <div className="container d-flex justify-content-center align-items-center " style={{minHeight:"80vh"}}>
       <div className="row mt-3">
         {/* First Column */}
-        <div className="col-12 col-lg-8  order-2">
+        <div className="col-12 col-lg-8 ">
   
  
           <div>
@@ -96,7 +96,7 @@ const Dashboard = () => {
         </div>
 
         {/* Second Column */}
-        <div className="col-12 col-lg-4  order-1">
+        <div className="col-12 col-lg-4  ">
           
            <Todaydata currentdata={currentdata} city={weatherdata && weatherdata.city ? weatherdata.city.name:"Loading"}/> 
         </div>
