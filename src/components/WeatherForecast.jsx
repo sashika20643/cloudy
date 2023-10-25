@@ -1,6 +1,6 @@
 // WeatherForecast.jsx
 import React, { useState } from "react";
-import WeatherCard from "./WeatherCard";
+import WeatherCard from "./Weathercard";
 
 const WeatherForecast = ({ weatherData }) => {
   const [showMore, setShowMore] = useState(false);
