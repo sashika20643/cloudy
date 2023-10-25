@@ -12,8 +12,8 @@ const WeatherCard = ({ day, temperature, description,weatherId ,icon,Humidity,Wi
           <div className="d-flex">
 
         
-          <h5 className="card-title">{day}</h5>
-          <img src={`http://openweathermap.org/img/wn/${icon}.png`}   />
+          <h5 className="card-title w-75">{day}</h5>
+          <img src={`http://openweathermap.org/img/wn/${icon}.png`} className="w-25"  />
           </div>
           <p className="card-text" style={{color: "rgba(242, 240, 240, 0.6)"}}>{description}</p>
           <table className="datatables">
