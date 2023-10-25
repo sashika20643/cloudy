@@ -1,5 +1,5 @@
 // Dashboard.jsx
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import Todaydata from "../components/Todaydata";
 import React, { useState, useEffect  } from "react";
 import WeatherForecast from "../components/WeatherForecast"; // Import the WeatherForecast component
