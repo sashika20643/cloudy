@@ -11,23 +11,22 @@ const SmallweatherIcon = ({ weatherId }) => {
    
 
   const getIconUrl = (id) => {
-    // Extract the first digit from the weather ID
+   
     const firstDigit = id.toString()[0];
 
-    // Map the first digit to a specific image or category
+    
     const iconMapping = {
-      '2': Thunderstorm , // Group 2xx: Thunderstorm
-      '3': Drizzle,       // Group 3xx: Drizzle
-      '5': Rain,          // Group 5xx: Rain
-      '6': Snow,          // Group 6xx: Snow
+      '2': Thunderstorm , 
+      '3': Drizzle,       
+      '5': Rain,          
+      '6': Snow,          
       '7': Atmosphere,
      
-      // Add more mappings as needed
+   
     };
 
     const iconCode = iconMapping[firstDigit];
     if (iconCode) {
-      // Assuming your weather icons are in the public folder
       return iconCode;
     }
     else if(id==800){

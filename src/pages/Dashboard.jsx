@@ -1,4 +1,4 @@
-// Dashboard.jsx
+
 import Navbar from "../components/Navbar";
 import Todaydata from "../components/Todaydata";
 import React, { useState, useEffect  } from "react";
