@@ -22,9 +22,8 @@ return(
     <form onSubmit={signIn}>
       <div className="d-flex align-items-center mb-3 pb-1">
         <i className="fas fa-cubes fa-2x me-3" style={{ color: '#ff6219' }}></i>
-    
+        
        <img src={logo} className="img-thumbnail " style={{width:'20%'}} alt="" />
-
       </div>
 
       <h5 className="fw-normal mb-3 pb-3" style={{ letterSpacing: '1px' }}>
@@ -39,7 +38,7 @@ return(
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label className="form-label" htmlFor="form2Example17">
+        <label className="form-label">
           Email address
         </label>
       </div>
@@ -52,13 +51,13 @@ return(
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <label className="form-label" htmlFor="form2Example27">
+        <label className="form-label" >
           Password
         </label>
       </div>
 
       <div className="pt-1 mb-4">
-        <button className="btn btn-dark btn-lg btn-block" type="submit" >
+        <button className="btn text-white btn-lg btn-block" style={{backgroundColor:"#22647e"}} type="submit" >
           Login
         </button>
       </div>

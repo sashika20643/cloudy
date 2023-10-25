@@ -7,11 +7,11 @@ const Login=()=>{
 
 
     return (
-        <section className="vh-100"  style={{backgroundColor:"#232e3f"}}>
+        <section className="vh-100"  style={{backgroundColor:"#303837"}}>
         <div className="container py-5 h-100" >
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col col-xl-10">
-              <div className="card" style={{boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px", borderRadius: '1rem' , backgroundColor:"#26324b"}}>
+              <div className="card" style={{boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px", borderRadius: '1rem' , backgroundColor:"#0b121e"}}>
                 <div className="row g-0">
                   <div className="col-md-6 col-lg-5 d-none d-md-block">
            
