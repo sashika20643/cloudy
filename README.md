@@ -1,4 +1,6 @@
 Weather App- <b><a href="https://cloudy-beta.vercel.app/">On live now</a></b>
+<b>User name :</b> admin@cloudy.com
+<b>Password :</b> Icanit11*
 
 Developed a web-based weather application using React and Firebase, providing real-time weather information for any location based on latitude and longitude. The app allows users to securely log in, search for weather details, and view forecasts for the current day and the week ahead. Utilized the OpenWeatherMap API for accurate weather data and deployed the application on Heroku for easy access. Designed an intuitive and visually appealing user interface to enhance the user experience. Implemented Firebase authentication for secure login functionality.
 
