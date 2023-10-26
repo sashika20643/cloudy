@@ -1,6 +1,7 @@
 
 import Navbar from "../components/Navbar";
 import Todaydata from "../components/Todaydata";
+
 import React, { useState, useEffect  } from "react";
 import WeatherForecast from "../components/WeatherForecast"; // Import the WeatherForecast component
 
@@ -12,9 +13,12 @@ const Dashboard = () => {
   const[weatherdata,setweatherdata]=useState(null);
   const[latitude,setLatitude]=useState("");
   const[longitude,setLongitude]=useState("");
+  const [loading, setLoading] = useState(false);
+  
 
   const searchWeather = async (lat = 6.9319, lon = 79.8478) => {
     try {
+      setLoading(true);
       const apiKey = '1015b879cc0813273d6970d1d2f3d0ac'; // Replace with your actual API key
       const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
@@ -31,6 +35,8 @@ const Dashboard = () => {
 
     } catch (error) {
       console.error('Error fetching weather data:', error);
+    }finally {
+      setLoading(false); // Set loading to false when the search is complete
     }
     
     
@@ -92,13 +98,17 @@ const Dashboard = () => {
       </div>
     </div>
   </div>
-  <WeatherForecast weatherData={weatherdata} />
+  {loading ? (
+              <div className="loading-spinner"></div> 
+            ) : (
+              <WeatherForecast weatherData={weatherdata} />
+            )}
         </div>
 
         {/* Second Column */}
         <div className="col-12 col-lg-4  ">
-          
-           <Todaydata currentdata={currentdata} city={weatherdata && weatherdata.city ? weatherdata.city.name:"Loading"}/> 
+          {loading?(   <div ></div> ):
+          ( <Todaydata currentdata={currentdata} city={weatherdata && weatherdata.city ? weatherdata.city.name:"Loading"}/>) }
         </div>
       </div>
     </div>
